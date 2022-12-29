@@ -1,2 +1,17 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+<script>
+    import Home from "./home.svelte";
+    import Hadiah from "./hadiah.svelte";
+    let flowState = 0
+    let firstCode = ''
+
+    let increaseFlowState = () => {
+        flowState++;
+    }
+
+    let setFirstCode = (param) => {
+        firstCode = param
+    }
+</script>
+
+<Home increaseFlowState={increaseFlowState} flowState={flowState} setFirstCode={setFirstCode}/>
+<Hadiah increaseFlowState={increaseFlowState} flowState={flowState} firstCode={firstCode}/>
