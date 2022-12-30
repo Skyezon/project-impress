@@ -11,7 +11,18 @@
     let setFirstCode = (param) => {
         firstCode = param
     }
+
+    let handleShowOrder = () => {
+        switch(flowState) {
+            case 1 : return 
+            case 2 : return 
+        }
+    }
 </script>
 
-<Home increaseFlowState={increaseFlowState} flowState={flowState} setFirstCode={setFirstCode}/>
-<Hadiah increaseFlowState={increaseFlowState} flowState={flowState} firstCode={firstCode}/>
+
+{#if flowState == 0}
+<Home increaseFlowState={increaseFlowState} setFirstCode={setFirstCode}/>
+{:else if flowState == 1}
+<Hadiah increaseFlowState={increaseFlowState} firstCode={firstCode}/>
+{/if}

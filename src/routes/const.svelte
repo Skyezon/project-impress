@@ -15,5 +15,41 @@ export const theCorectPass = new Map([
         ["58f4a3e4c2777a22a5ff0985a9a193bc",code.WSD], //hadiah wisuda
     ])
 
+export const HADIAH_CODE = {
+    BUNGA : "BUNGA",
+    BONEKA : "BONEKA",
+    BEKAL : "BEKAL"
+}
+
+export const HADIAH_ID = {
+    BUNGA : ["bunga"],
+    BONEKA : ["boneka", "beruang", "boneka beruang"],
+    BEKAL : ["kotak","makan","bekal","kotak makan","kotak bekal"]
+}
+
+export const CONTENT_HADIAH = {
+    BUNGA :  {
+        "title" : "tah apa ini",
+        "picture" : "https",
+        "backmsg" : "ada sih suatu hari aku liat orang dapat sesuatu yang mirip ini tapi isinya uang semua dan gada yang kasi asli jadinya gini de",
+        "picuter-alt" : "cek internet",
+        "subtitle" : "bakar aja sih"
+    },
+    BONEKA : {
+        "title" : "sesuatu yang bisa ditumbuk",
+        "picture" : "https",
+        "backmsg" : `ucul kan, gunanya supaya kau tumbuk aja sih karena lelah kan menghadapi client" berwarna`,
+        "picuter-alt" : "cek internet",
+        "subtitle" : "ato di potong"
+
+    },
+    BEKAL :  {
+        "title" : "rencananya ada makanannya didalam",
+        "picture" : "https",
+        "backmsg" : `supaya nampak lo lebih kaya dikit`,
+        "picuter-alt" : "cek internet",
+        "subtitle" : "tapi diisi sendiri aja ya"
+    }
+}
 
 </script>
