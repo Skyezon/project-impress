@@ -49,7 +49,7 @@ export let setFirstCode
     let buttonClick = () => {
         isiText = isiText.toLowerCase()
         lastHold = isiText
-        // writeAttemplog(isiText) //enable when on prod
+        writeAttemplog(isiText) //enable when on prod
 
         for (let [key,value] of theCorectPass){
             if ( MD5(isiText)== key) {
@@ -104,7 +104,7 @@ export let setFirstCode
     let buttonStuff
 
     let wordTl = gsap.timeline()
-    const baseDuration = 6
+    const baseDuration = 4
 
 
 
@@ -113,10 +113,10 @@ export let setFirstCode
     onMount(() => {
         gsap.to(cursor,{opacity:0,ease:"power2.inOut",repeat:-1})
         gsap.registerPlugin(TextPlugin)
-        reverseTween = gsap.to(wordPlaceHolder, {duration: baseDuration, text : word, ease: "none",delay:3})
+        reverseTween = gsap.to(wordPlaceHolder, {duration: baseDuration, text : word, ease: "none",delay:1.5})
 
         gsap.to(textbox,{opacity:1,delay: baseDuration + 4, duration : 2})
-        gsap.to(buttonStuff,{opacity:1, delay: baseDuration * 2, duration : 2})
+        gsap.to(buttonStuff,{opacity:1, delay: baseDuration + 6, duration : 2})
     })
 
 

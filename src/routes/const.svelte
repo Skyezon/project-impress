@@ -30,14 +30,14 @@ export const HADIAH_ID = {
 export const CONTENT_HADIAH = {
     BUNGA :  {
         "title" : "tah apa ini",
-        "picture" : "https",
+        "picture" : "bunga",
         "backmsg" : "ada sih suatu hari aku liat orang dapat sesuatu yang mirip ini tapi isinya uang semua dan gada yang kasi asli jadinya gini de",
         "picuter-alt" : "cek internet",
         "subtitle" : "bakar aja sih"
     },
     BONEKA : {
         "title" : "sesuatu yang bisa ditumbuk",
-        "picture" : "https",
+        "picture" : "boneka",
         "backmsg" : `ucul kan, gunanya supaya kau tumbuk aja sih karena lelah kan menghadapi client" berwarna`,
         "picuter-alt" : "cek internet",
         "subtitle" : "ato di potong"
@@ -45,8 +45,8 @@ export const CONTENT_HADIAH = {
     },
     BEKAL :  {
         "title" : "rencananya ada makanannya didalam",
-        "picture" : "https",
-        "backmsg" : `supaya nampak lo lebih kaya dikit`,
+        "picture" : "box",
+        "backmsg" : `supaya kelihatan ga misqueen kali`,
         "picuter-alt" : "cek internet",
         "subtitle" : "tapi diisi sendiri aja ya"
     }

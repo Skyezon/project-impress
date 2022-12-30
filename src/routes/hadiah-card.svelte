@@ -55,9 +55,11 @@ let handleButtonClick = () => {
 
 let checkIdOk = (inputText) => {
     for (let [key, ids] of Object.entries(HADIAH_ID)) {
-        for(let id in ids){
+        for(let id of ids){
+
             if (inputText.includes(id)){
                 console.log(id)
+                console.log("pemisah")
                 console.log(inputText)
                 if (whatDone[key] == false){
                     return key
@@ -131,7 +133,7 @@ $: showMsg = handleErrorFlag(errFlag)
     
     <div class="cardBack card" bind:this={backCard}>
         <Card style=" height: 24em !important;width : 19em !important;">
-            <div style="padding: 1rem;">
+            <div style="padding: 1rem;" class="backCover">
                 <h6 class="mdc-typography--headline6" style="margin: 0;">
                   {backsideData.title}
                 </h6>
@@ -139,12 +141,15 @@ $: showMsg = handleErrorFlag(errFlag)
                   {backsideData.subtitle}
                 </span>
               </div>
-            <Media aspectRatio="16x9"/>
-            <Content class="mdc-typography--body2" style="text-align:center">
-                <span>
-                    {backsideData.backmsg}
-                </span>
-            </Content>
+            <Media aspectRatio="16x9" style={`background-image: url(./${backsideData.picture}.jpg);`} class={"backImage"}/>
+            <div class="backCover" style="height:100%">
+                <Content class="mdc-typography--body2" style="text-align:center">
+                    <span>
+                        {backsideData.backmsg}
+                    </span>
+                </Content>
+            </div>
+           
         </Card>
     </div>
 </div>
@@ -178,5 +183,18 @@ $: showMsg = handleErrorFlag(errFlag)
 
     .opa-hide{
         opacity: 0;
+    }
+
+    .backCover {
+        background-color:#546E7A ;
+        color: #fff;
+    }
+    
+    .backImage {
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center;
+        background-size: cover;
+
     }
 </style>
