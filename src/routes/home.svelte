@@ -27,6 +27,13 @@ export let setFirstCode
     const errMsg = [
         "yang betol az la",
         "ntar lagi dapat emas",
+        "pat pat jangan menyerah",
+        "ini bakal berubah terus sih textnya",
+        "tapi pasti bakal habis kok",
+        "dicoba aja terus ya",
+        "ada lo jawabannya",
+        "mulai bosen ya",
+        "yoda sekali lagi klo gk tau aku bantuin",
         "ga tau juga ba, yoda ganti soal dehh",
         "yang ini pun bisa salah ya ampoen",
         "seriusan ga tau? apa salah org ini",
@@ -72,7 +79,7 @@ export let setFirstCode
             console.log("show error popup delay it")
             errFlag = true
             snackbarError.open()
-            if (errorCount == errMsg.length || isiText == '') {
+            if (errorCount == errMsg.length -1 || isiText == '') {
                 
             }else{
                 errorCount++
@@ -87,7 +94,7 @@ export let setFirstCode
     }
 
     let changeQuestion = (errorCount) => {
-        if (errorCount == 2){
+        if (errorCount == 9){
         let hasil = reverseTween.reverse(0)
         wordTl.add(hasil)
         wordTl.to(wordPlaceHolder, {duration: baseDuration, text : word1, ease: "none"})
